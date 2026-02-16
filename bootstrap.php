@@ -1,108 +1,75 @@
 <?php
 declare(strict_types=1);
 
-/*
- * Paths
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link      https://cakephp.org CakePHP(tm) Project
+ * @since     3.0.0
+ * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
-require __DIR__ . DIRECTORY_SEPARATOR . 'paths.php';
 
-/*
- * Bootstrap CakePHP core
- */
-require CORE_PATH . 'config' . DS . 'bootstrap.php';
-
-use Cake\Cache\Cache;
+use Cake\Chronos\Chronos;
 use Cake\Core\Configure;
-use Cake\Core\Configure\Engine\PhpConfig;
 use Cake\Datasource\ConnectionManager;
-use Cake\Error\ErrorTrap;
-use Cake\Error\ExceptionTrap;
-use Cake\Http\ServerRequest;
-use Cake\Log\Log;
-use Cake\Mailer\TransportFactory;
-use Cake\Routing\Router;
-use Cake\Utility\Security;
-use function Cake\Core\env;
+use Cake\TestSuite\ConnectionHelper;
+use Migrations\TestSuite\Migrator;
 
-/*
- * Global helper functions
+/**
+ * Test runner bootstrap.
+ *
+ * Add additional configuration/setup your application needs when running
+ * unit tests in this file.
  */
-require CAKE . 'functions.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-/*
- * Load application config
- */
-try {
-    Configure::config('default', new PhpConfig());
-    Configure::load('app', 'default', false);
-} catch (\Exception $e) {
-    exit($e->getMessage() . "\n");
+require dirname(__DIR__) . '/config/bootstrap.php';
+
+if (empty($_SERVER['HTTP_HOST']) && !Configure::read('App.fullBaseUrl')) {
+    Configure::write('App.fullBaseUrl', 'http://localhost');
 }
 
-/*
- * Load local config (optional)
- */
-if (file_exists(CONFIG . 'app_local.php')) {
-    Configure::load('app_local', 'default');
-}
+// DebugKit skips settings these connection config if PHP SAPI is CLI / PHPDBG.
+// But since PagesControllerTest is run with debug enabled and DebugKit is loaded
+// in application, without setting up these config DebugKit errors out.
+ConnectionManager::setConfig('test_debug_kit', [
+    'className' => 'Cake\Database\Connection',
+    'driver' => 'Cake\Database\Driver\Sqlite',
+    'database' => TMP . 'debug_kit.sqlite',
+    'encoding' => 'utf8',
+    'cacheMetadata' => true,
+    'quoteIdentifiers' => false,
+]);
 
-/*
- * Short cache duration when debug = true
- */
-if (Configure::read('debug')) {
-    Configure::write('Cache._cake_model_.duration', '+2 minutes');
-}
+ConnectionManager::alias('test_debug_kit', 'debug_kit');
 
-/*
- * Timezone & encoding
- */
-date_default_timezone_set(Configure::read('App.defaultTimezone', 'UTC'));
-mb_internal_encoding(Configure::read('App.encoding', 'UTF-8'));
-ini_set('intl.default_locale', Configure::read('App.defaultLocale', 'en_US'));
+// Fixate now to avoid one-second-leap-issues
+Chronos::setTestNow(Chronos::now());
 
+// Fixate sessionid early on, as php7.2+
+// does not allow the sessionid to be set after stdout
+// has been written to.
+session_id('cli');
 
-/*
- * CLI adjustments
- */
-if (PHP_SAPI === 'cli') {
-    if (Configure::check('Log.debug')) {
-        Configure::write('Log.debug.file', 'cli-debug');
-    }
-    if (Configure::check('Log.error')) {
-        Configure::write('Log.error.file', 'cli-error');
-    }
-}
+// Connection aliasing needs to happen before migrations are run.
+// Otherwise, table objects inside migrations would use the default datasource
+ConnectionHelper::addTestAliases();
 
-/*
- * Full base URL auto-detect
- */
-$fullBaseUrl = Configure::read('App.fullBaseUrl');
-if (!$fullBaseUrl && env('HTTP_HOST')) {
-    $scheme = env('HTTPS') ? 'https' : 'http';
-    $fullBaseUrl = $scheme . '://' . env('HTTP_HOST');
-}
-if ($fullBaseUrl) {
-    Router::fullBaseUrl($fullBaseUrl);
-}
+// Use migrations to build test database schema.
+//
+// Will rebuild the database if the migration state differs
+// from the migration history in files.
+//
+// If you are not using CakePHP's migrations you can
+// hook into your migration tool of choice here or
+// load schema from a SQL dump file with
+// use Cake\TestSuite\Fixture\SchemaLoader;
+// (new SchemaLoader())->loadSqlFiles('./tests/schema.sql', 'test');
 
-/*
- * Apply configs (CakePHP 5 STYLE)
- */
-Cache::setConfig(Configure::consume('Cache'));
-ConnectionManager::setConfig(Configure::consume('Datasources'));
-TransportFactory::setConfig(Configure::consume('EmailTransport'));
-Log::setConfig(Configure::consume('Log'));
-Security::setSalt(Configure::consume('Security.salt'));
-
-/*
- * Mobile / Tablet detectors (optional)
- */
-ServerRequest::addDetector('mobile', function ($request) {
-    $detector = new \Detection\MobileDetect();
-    return $detector->isMobile();
-});
-
-ServerRequest::addDetector('tablet', function ($request) {
-    $detector = new \Detection\MobileDetect();
-    return $detector->isTablet();
-});
+(new Migrator())->run();

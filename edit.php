@@ -1,84 +1,69 @@
 <div class="card shadow-sm">
 <div class="card-body">
 
-<h3 class="mb-4">Edit News</h3>
+<h3 class="mb-4">Edit User</h3>
 
-<?= $this->Form->create($news, ['type' => 'file']) ?>
+<?= $this->Form->create($user) ?>
 
 <div class="row">
 
-    <!-- TITLE -->
-    <div class="col-md-6 mb-3">
-        <?= $this->Form->control('title', [
-            'class' => 'form-control'
-        ]) ?>
-    </div>
+<div class="col-md-6 mb-3">
+    <?= $this->Form->control('name', [
+        'class'=>'form-control'
+    ]) ?>
+</div>
 
-    <!-- TENDER -->
-    <div class="col-md-6 mb-3">
-        <?= $this->Form->control('tender_id', [
-            'options' => $tenders,
-            'empty' => '-- Optional Tender --',
-            'class' => 'form-select'
-        ]) ?>
-    </div>
+<div class="col-md-6 mb-3">
+    <?= $this->Form->control('email', [
+        'class'=>'form-control'
+    ]) ?>
+</div>
 
-    <!-- DESCRIPTION -->
-    <div class="col-12 mb-3">
-        <?= $this->Form->control('description', [
-            'type' => 'textarea',
-            'rows' => 4,
-            'class' => 'form-control'
-        ]) ?>
-    </div>
+<div class="col-md-6 mb-3">
+    <?= $this->Form->control('role', [
+        'type'=>'select',
+        'options'=>[
+            1=>'Admin',
+            2=>'Staff',
+            3=>'Vendor'
+        ],
+        'class'=>'form-select'
+    ]) ?>
+</div>
 
-    <!-- CURRENT IMAGE PREVIEW -->
-    <?php if (!empty($news->image)): ?>
-    <div class="col-md-6 mb-3">
-        <label class="form-label">Current Image</label>
-        <div>
-            <img src="<?= $this->Url->image('img/news/' . $news->image) ?>"
-                 class="img-thumbnail"
-                 style="max-width:250px;max-height:180px;object-fit:cover;">
-        </div>
-    </div>
-    <?php endif; ?>
+<div class="col-md-6 mb-3">
+    <?= $this->Form->control('status', [
+        'type'=>'select',
+        'options'=>[
+            1=>'Active',
+            0=>'Suspended'
+        ],
+        'class'=>'form-select'
+    ]) ?>
+</div>
 
-    <!-- NEW IMAGE UPLOAD -->
-    <div class="col-md-6 mb-3">
-        <?= $this->Form->control('image', [
-            'type' => 'file',
-            'accept' => 'image/*',
-            'label' => 'Change Image (optional)',
-            'class' => 'form-control'
-        ]) ?>
-    </div>
-
-    <!-- STATUS -->
-    <div class="col-md-6 mb-3">
-        <?= $this->Form->control('status', [
-            'type' => 'select',
-            'options' => [
-                1 => 'Active',
-                0 => 'Inactive'
-            ],
-            'class' => 'form-select'
-        ]) ?>
-    </div>
+<div class="col-md-6 mb-3">
+    <?= $this->Form->control('password', [
+        'type'=>'password',
+        'required'=>false,
+        'label'=>'New Password (leave blank to keep)',
+        'class'=>'form-control'
+    ]) ?>
+</div>
 
 </div>
 
 <hr>
 
 <div class="mt-3">
-    <?= $this->Form->button('Update News', [
-        'class' => 'btn btn-success'
+    <?= $this->Form->button('Update User', [
+        'class'=>'btn btn-success'
     ]) ?>
 
     <?= $this->Html->link(
         'Cancel',
-        ['action' => 'index'],
-        ['class' => 'btn btn-secondary ms-2']
+        ['action'=>'index'],
+        ['class'=>'btn btn-secondary ms-2']
     ) ?>
 </div>
 
