@@ -1,0 +1,24 @@
+2026-02-01 06:59:19 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 06:59:49 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 06:59:51 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 07:00:45 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 07:00:46 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 07:05:06 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 07:07:59 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377
+2026-02-01 07:09:43 notice: Since 5.1.0: Cache config `_cake_core_` is deprecated. Use `_cake_translations_` instead
+C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\I18n\I18n.php, line: 152
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/I18n/I18n.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only. in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Core\functions.php on line 377

@@ -1,0 +1,273 @@
+2026-02-01 05:16:53 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:17:12 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:18:43 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:19:10 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:19:21 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:19:41 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+2026-02-01 05:26:38 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 203
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1045] Access denied for user \'my_app\'@\'localhost\' (using password: YES)',
+)
+Stack Trace:
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\laragon\www\my-tender\vendor\cakephp\cakephp\src\Database\Driver.php on line 196
+Stack Trace:
+- CORE\src\Database\Driver.php:196
+- CORE\src\Core\Retry\CommandRetry.php:71
+- CORE\src\Database\Driver.php:201
+- CORE\src\Database\Driver\Mysql.php:159
+- CORE\src\Database\Schema\SchemaDialect.php:60
+- CORE\src\Database\Driver\Mysql.php:205
+- CORE\src\Database\Schema\Collection.php:97
+- CORE\src\Database\Schema\Collection.php:87
+- CORE\src\ORM\Table.php:526
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:117
+- ROOT\vendor\cakephp\bake\src\Command\ModelCommand.php:100
+- CORE\src\Console\BaseCommand.php:201
+- CORE\src\Console\CommandRunner.php:339
+- CORE\src\Console\CommandRunner.php:175
+- ROOT\bin\cake.php:10
+- [main]:
+
